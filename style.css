@@ -346,4 +346,26 @@ header nav a {
     left: 0;
 }
 
-/* .slider.next .loading-bar */
+.slider.next .loading-bar,
+.slider.prev .loading-bar {
+  width: 100%;
+  animation: loadingTime 2s linear 1 forwards
+}
+
+@keyframes loadingTime {
+  to {
+    width: 0;
+  }
+}
+
+/* Mobile Breakpoint */
+@media screen and (max-width: 678px) {
+  .slider .list .item .detail .name {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+  }
+
+  .slider .list .item .detail .desc {
+    font-size: 0.8rem;
+  }
+}
