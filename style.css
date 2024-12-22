@@ -289,7 +289,7 @@ header nav a {
 
 /* Action Previous */
 .slider.prev .list .item:nth-child(2) {
-    z-index: 2;
+  z-index: 2;
 }
 .slider.prev .list .item:nth-child(2) > img {
   position: absolute;
@@ -309,10 +309,10 @@ header nav a {
 }
 
 .slider.prev .thumbnail .item:nth-child(1) {
-    width: 0;
-    overflow: hidden;
-    opacity: 0;
-    animation: showThumbnail 0.5s linear 1 forwards;
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  animation: showThumbnail 0.5s linear 1 forwards;
 }
 
 .slider.prev .list .item:nth-child(2) .tittle,
@@ -324,32 +324,116 @@ header nav a {
 }
 
 @keyframes hideDetail {
-    to {
-        transform: translateY(-150px);
-        filter: blur(20px);
-        opacity: 0;
-    }
+  to {
+    transform: translateY(-150px);
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+
+/* Starting Animation for Item 3 */
+.slider .list .item:nth-child(3) .tittle,
+.slider .list .item:nth-child(3) .name,
+.slider .list .item:nth-child(3) figure,
+.slider .list .item:nth-child(3) .desc,
+.slider .list .item:nth-child(3) .more {
+  transform: translateY(50px);
+  filter: blur(50px);
+  opacity: 0;
+  animation: showDetail 0.5s 2s linear 1 forwards; /* Delay 2s */
+}
+
+.slider .list .item:nth-child(3) .tittle {
+  animation-delay: 2s;
+}
+.slider .list .item:nth-child(3) .name {
+  animation-delay: 2.2s;
+}
+.slider .list .item:nth-child(3) figure {
+  animation-delay: 2.4s;
+}
+.slider .list .item:nth-child(3) .desc {
+  animation-delay: 2.6s;
+}
+.slider .list .item:nth-child(3) .more {
+  animation-delay: 2.8s;
+}
+
+/* Starting Animation for Item 4 */
+.slider .list .item:nth-child(4) .tittle,
+.slider .list .item:nth-child(4) .name,
+.slider .list .item:nth-child(4) figure,
+.slider .list .item:nth-child(4) .desc,
+.slider .list .item:nth-child(4) .more {
+  transform: translateY(50px);
+  filter: blur(50px);
+  opacity: 0;
+  animation: showDetail 0.5s 3s linear 1 forwards; /* Delay 3s */
+}
+
+.slider .list .item:nth-child(4) .tittle {
+  animation-delay: 3s;
+}
+.slider .list .item:nth-child(4) .name {
+  animation-delay: 3.2s;
+}
+.slider .list .item:nth-child(4) figure {
+  animation-delay: 3.4s;
+}
+.slider .list .item:nth-child(4) .desc {
+  animation-delay: 3.6s;
+}
+.slider .list .item:nth-child(4) .more {
+  animation-delay: 3.8s;
+}
+
+/* Starting Animation for Item 5 */
+.slider .list .item:nth-child(5) .tittle,
+.slider .list .item:nth-child(5) .name,
+.slider .list .item:nth-child(5) figure,
+.slider .list .item:nth-child(5) .desc,
+.slider .list .item:nth-child(5) .more {
+  transform: translateY(50px);
+  filter: blur(50px);
+  opacity: 0;
+  animation: showDetail 0.5s 4s linear 1 forwards; /* Delay 4s */
+}
+
+.slider .list .item:nth-child(5) .tittle {
+  animation-delay: 4s;
+}
+.slider .list .item:nth-child(5) .name {
+  animation-delay: 4.2s;
+}
+.slider .list .item:nth-child(5) figure {
+  animation-delay: 4.4s;
+}
+.slider .list .item:nth-child(5) .desc {
+  animation-delay: 4.6s;
+}
+.slider .list .item:nth-child(5) .more {
+  animation-delay: 4.8s;
 }
 
 .slider.next .arrows button,
 .slider.prev .arrows button {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .loading-bar {
-    width: 0%;
-    height: 5px;
-    background-color: #f80;
-    position: absolute;
-    z-index: 999;
-    top: 0;
-    left: 0;
+  width: 0%;
+  height: 5px;
+  background-color: #f80;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
 }
 
 .slider.next .loading-bar,
 .slider.prev .loading-bar {
   width: 100%;
-  animation: loadingTime 2s linear 1 forwards
+  animation: loadingTime 2s linear 1 forwards;
 }
 
 @keyframes loadingTime {
