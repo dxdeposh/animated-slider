@@ -4,29 +4,76 @@ body {
   background-color: #000;
   color: #fff;
   font-size: 1.2rem;
+  margin-top: 50px;
 }
 
+/* Header Enhancements */
 header {
-  width: 1200px;
-  max-width: 80%;
-  margin: auto;
-  height: 50px;
+  background: rgba(0, 0, 0, 0); /* Latar belakang semi-transparan */
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Pastikan header berada di atas elemen lain */
+}
+
+nav {
+  padding-top: 10px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  position: relative;
-  z-index: 999;
+  width: 1200px;
+  max-width: 90%;
+  margin: auto;
+  flex-wrap: nowrap;
 }
 
-header nav {
-  display: flex;
-  gap: 2rem;
-}
-
-header nav a {
+.nav-left a {
+  margin-right: 2rem;
+  font-weight: 500;
+  color: #fff; /* Warna teks terang */
+  transition: color 0.3s ease;
+  white-space: nowrap;
   text-decoration: none;
-  text-transform: uppercase;
-  color: white;
-  letter-spacing: 0.1rem;
+}
+
+.nav-left a:hover {
+  color: #d3321d; /* Warna saat hover */
+}
+
+.nav-right .btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-right .btn.login {
+  background-color: transparent;
+}
+
+.nav-right .btn.login:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-right .btn.register {
+  background-color: #d3321d;
+}
+
+.nav-right .btn.register:hover {
+  background-color: #fff;
+  color: #d3321d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Slider */
@@ -433,6 +480,21 @@ header nav a {
     width: 250px;
     right: 45%;
   }
+
+  /* Sesuaikan ukuran dan layout untuk tablet */
+  nav {
+    width: 90%;
+  }
+
+  .nav-left a {
+    margin-right: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .nav-right .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
 }
 
 @media screen and (max-width: 678px) {
@@ -443,6 +505,42 @@ header nav a {
 
   .slider .list .item .detail .desc {
     font-size: 0.8rem;
+  }
+
+  /* Layout untuk perangkat mobile */
+  nav {
+    flex-direction: row; /* Tetap row */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Mencegah wrap */
+    width: 100%;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-left a {
+    margin-right: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push ke kanan */
+  }
+
+  .nav-right .btn {
+    margin-left: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-left .logo img {
+    width: 35px;
+    margin-right: 0.5rem;
   }
 }
 
@@ -470,5 +568,37 @@ header nav a {
 
   .pagination {
     bottom: 10px;
+  }
+
+  /* Layout untuk ponsel kecil */
+  nav {
+    flex-direction: row; /* Tetap row */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Mencegah wrap */
+    width: 100%;
+  }
+
+  .nav-left a {
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push ke kanan */
+  }
+
+  .nav-right .btn {
+    margin-left: 0.3rem;
+    margin-right: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .nav-left .logo img {
+    width: 30px;
+    margin-right: 0.5rem;
   }
 }
